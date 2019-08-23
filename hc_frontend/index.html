@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="drawing.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+	
+	
+	<div class="navbar">
+		
+
+	</div>
+
+	<div class="main">
+
+	</div>
+
+
+
+	<div class="my_menu_full">
+		<div class="my_menu_help">
+			<div class="my_menu">
+			
+			</div>		
+		</div>
+	</div>
+
+
+	<div id="myModal" class="modal">
+	  <!-- Modal content -->
+		  <div class="modal-content">
+		  <span class="close">&times;</span>
+		  <div class="modal-header">
+		    <h2>Welcome, most valuable customer!</h2>
+		  </div>
+		  <div class="modal-body">
+		  	<div class="intro">
+				<label for="display-name">Please, introduce yourself: </label>
+		        <input type="text" class="form-control" id="new-client" placeholder="Name" value="Super Important Client">
+		        <h3>What can we help you with today?</h3>
+	        </div>
+	        <div class="morpheus_choice">
+		        <div class="choice">
+		        				
+
+		        	<p class="tooltip">
+		        		<span class="tooltiptext">Just enter your budget and pick up contractors...</span>
+		        		Standard contractor job.
+		        	</p> 
+		        	<p>My budget is <input type="number" name="fund" value="50" id="init_fund"></p> <br>
+		        	
+		        	<input type="button" name="standard" class="button green" value="Go!" id="standard_button">
+		        </div>
+		        <div class="choice_m">
+		        	<img src="morpheus_whbk.jpeg">
+			        <h4>OR</h4>
+			    </div>
+		       	<div class="choice">
+		       		<p class="tooltip">
+		       			<span class="tooltiptext">Beware! If you reject contractor, he won't accept your request again...</span>
+		       			Very custom construction job.
+		       		</p>
+		       		<p>I need quotes from <input type="number" name="fund" value="12" max="20" id="line"> contractors.</p>
+		       		<input type="button" name="non_standard" class="button red" value="Go!" id="non_standard_button">
+		       	</div>
+	       	</div>
+
+		  </div>
+		  <div class="modal-footer">
+		    <h4> </h4>
+		  </div>
+	</div>
+
+
+	
+
+</div>
+
+</body>
+</html> 

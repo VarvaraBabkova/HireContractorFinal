@@ -1,0 +1,522 @@
+
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;  
+}
+
+/* Style page content */
+.main {
+  margin-top: 60px; 
+  margin-bottom: 100px;
+
+  height: 2000px;
+  overflow-y: scroll;
+  padding: 0px 10px;
+  color: black;
+ 
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #999999;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       z-index: 100;
+
+}
+
+.my_menu_full {
+  background-color: #ddd;
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height: 200px;
+  box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 100;
+  overflow-x: hidden;
+
+}
+
+.my_menu_help {
+  background-color: #ddd;
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0; /* Position the navbar at the top of the page */
+  width: 80%; /* not full width */
+  height: 200px;
+  /*box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  z-index: 101;
+  overflow-x: hidden;
+  object-fit: cover;
+  
+
+}
+
+.my_menu {
+  background-color: #ddd;
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 0; /* Position the navbar at the top of the page */
+  width: 80%; /* looong width */
+  height: 200px;
+  /*box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  z-index: 102;
+  overflow-x: scroll;
+  overflow-y: scroll;
+
+}
+
+.fund {
+  position: fixed; /* Set the navbar to fixed position */
+  bottom: 20px; 
+  right: 20px;
+  color: lawngreen;
+  text-shadow: 2px 2px 3px black, 0 0 25px blue, 0 0 5px green;
+  text-align: center;
+  /*background-color: rgb(60, 179, 113);*/
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+
+}
+
+.navbar button {
+
+  width: 33.33%;
+  border: none;
+  background-color: #fff;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.navbar button:hover {
+  background: #ddd;
+  color: black;
+}
+
+.navbar button:focus {
+        border: none !important;
+        box-shadow: none !important;
+        outline: 0 none !important;
+    }
+
+
+
+
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+
+  width: 150px;
+  height: 150px;
+   overflow: hidden;
+   object-fit: cover;
+    object-position: -50% 0;
+
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    margin: 10px;
+    position: relative;
+
+    /*opacity: 0.3;*/
+
+}
+
+div.gallery:hover {
+  border: 1px solid #777; /*leave only this!!*/
+}
+
+div.gallery img {
+ 
+  height:  100%;
+  width:  auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+   z-index: 1;
+}
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+   text-align: center;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 2px 56px;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0px; opacity: 1}
+}
+
+.morpheus_choice:after {
+   width: 80%;
+  
+    content: "";
+  display: table;
+  clear: both;
+
+}
+
+.intro{
+  text-align: center;
+
+}
+
+.choice {
+  width: 33.33%;
+  height: 250px;
+  float: left;
+  text-align: center;
+  vertical-align: bottom;
+  background-color: white;
+  padding-top: 45px;
+}
+.choice_m {
+  width: 33.33%;
+  height: 250px;
+  float: left;
+  text-align: center;
+  vertical-align: bottom;
+  background-color: white;
+} 
+div.choice img {
+  width: 100%;
+  height: auto;
+}
+input[type=number]{
+    width: 80px;
+} 
+
+.button{
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  padding: 6px 20px;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid #bbb;
+  overflow: visible;
+  font: bold 13px arial, helvetica, sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #555;
+  
+  background-color: #ddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  background-image: -ms-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  background-image: -o-linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  background-image: linear-gradient(top, rgba(255,255,255,1), rgba(255,255,255,0));
+  
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -ms-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  background-clip: padding-box; /* Fix bleeding */
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 2px 2px -1px rgba(0, 0, 0, .5), 0 1px 0 rgba(255, 255, 255, .3) inset;
+  text-shadow: 0 1px 0 rgba(255,255,255, .9);
+  
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button:hover{
+  background-color: #eee;
+  color: #555;
+}
+
+.button:active{
+  background: #e9e9e9;
+  position: relative;
+
+  top: 1px;
+  text-shadow: none;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+
+  
+
+}
+.button:focus{
+  border: none !important;
+        box-shadow: none !important;
+        outline: 0 none !important;
+
+}
+
+.button[disabled], .button[disabled]:hover, .button[disabled]:active{
+  border-color: #eaeaea;
+  background: #fafafa;
+  cursor: default;
+  position: static;
+  color: #999;
+  /* Usually, !important should be avoided but here it's really needed :) */
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.button.green{
+  background-color: #57a957;
+  border-color: #57a957;
+}
+
+.button.green:hover{
+  background-color: #62c462;
+}
+
+.button.green:active{
+  background: #57a957;
+}
+
+.button.red{
+  background-color: #ca3535;
+  border-color: #c43c35;
+}
+
+.button.red:hover{
+  background-color: #ee5f5b;
+}
+
+.button.red:active{
+  background: #c43c35;
+}
+
+
+/***************************************PLAYING UNDER THIS BAR****************************************************/
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+ perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+ /* background-color: #bbb;
+  color: black;*/
+}
+
+.flip-card-back {
+  /*background-color: #2980b9;
+  color: white;*/
+  overflow: scroll;
+  transform: rotateY(180deg);
+}
+
+/*******************************TOOL TIPS************************************************************/
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /*border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 10;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #eee;}
+
+.success {color: green;}
+
+/************************************************ YAY **************************************************/
+
+@keyframes keyframes1 {
+  0% {
+    transform: rotate(-1deg);
+    animation-timing-function: ease-in;
+  }
+   50% {
+    transform:  rotate(1.5deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes keyframes2 {
+  0% {
+    transform:  rotate(1deg);
+    animation-timing-function: ease-in;
+  }
+   50% {
+    transform:  rotate(-1.5deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+.giggle:nth-child(2n){
+  animation-name: keyframes1;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 10%;
+}
+
+.giggle:nth-child(2n - 1){
+  animation-name: keyframes2;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 30% 5%;
+}
+
+
+/********************************************MORPH ANIMATION*********************************************/
+#show_up_morph {
+  position: fixed;
+  bottom: 0;
+  right: 200px;
+  transform: translate3d(0, 50vw, 0);
+  transition: transform 4s cubic-bezier(0, .52, 0, 1);
+  z-index: 105;
+}
+#show_up_morph.show {
+  
+  transform: translate3d(0vw, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
